@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #3D3D3D;
+    text-align: center;
+}
+
+
+.topBar {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.topBar h3 {
+    margin-top: -1vh;
+}
+
+.greenButton {
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 300px;
+    padding: 10px 50px;
+    background-color: #BCE9BB;
+    transition-duration: 0.2s;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.greenButton:hover {
+    background-color: white;
+}
+
+.greyButton {
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 300px;
+    padding: 10px 50px;
+    background-color: #CCCCCC;
+    transition-duration: 0.2s;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.greyButton:hover {
+    background-color: white;
+}
+
+.pageDescription {
+    color: white;
+}

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %} 
+<div>
+    <h3> Team 1</h3>
+    <p> Total </p>
+    <p> {{ team1_info['total'] }} </p>
+    <p> Avg </p>
+    <p> {{ team1_info['avg'] }} </p>
+    <table class="playerTable">
+        {{ team1|safe }}
+    </table>
+    
+</div>
+<div>
+    <h3> Team 2 </h3>
+    <p> Total </p>
+    <p> {{ team2_info['total'] }} </p>
+    <p> Avg </p>
+    <p> {{ team2_info['avg'] }} </p>
+    <table class="playerTable">
+        {{ team2|safe }}
+    </table>
+</div>
+{% endblock %}

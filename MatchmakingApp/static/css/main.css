@@ -17,38 +17,108 @@ body {
     margin-top: -1vh;
 }
 
-.greenButton {
+.button {
     border: none;
     font-size: 24px;
     font-weight: bold;
-    width: 300px;
     padding: 10px 50px;
-    background-color: #BCE9BB;
     transition-duration: 0.2s;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.greenButton {
+    width: 300px;
+    background-color: #BCE9BB;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
-.greenButton:hover {
+.button:hover {
     background-color: white;
+    color: black;
 }
 
 .greyButton {
-    border: none;
-    font-size: 24px;
-    font-weight: bold;
     width: 300px;
-    padding: 10px 50px;
     background-color: #CCCCCC;
-    transition-duration: 0.2s;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
-.greyButton:hover {
-    background-color: white;
+.blueButton {
+    width: 300px;
+    background-color: #78879C;
+    color: black;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
+
 
 .pageDescription {
     color: white;
+}
+
+.popUp {
+    background-color: #78879C;
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+}
+
+table {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+th {
+    text-align: left;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td {
+    background-color: #404C5E;
+    color: white;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+.sliderWithLabel {
+    display: block;
+}
+
+.slider {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+}
+
+.textInput {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputLabel {
+    text-align: left;
 }

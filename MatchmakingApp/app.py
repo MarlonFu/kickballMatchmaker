@@ -15,6 +15,7 @@ player_data = Players()
 
 @app.route('/')
 def index():
+    player_data.table = player_data.table[0:0]
     return render_template('home.html', table=player_data.table.to_html(index=False ))
 
 
@@ -45,7 +46,7 @@ def create_teams():
         else:
             player_data.table['Overall'] = player_data.table['Kn'] + player_data.table['S'] + player_data.table['T'] + player_data.table['C'] + player_data.table['B/K']
             results = generate_teams(player_data.table)
-
+            player_data.table = player_data.table.drop(columns=['Player Type', 'Overall'])
             team1_tbl = results[0].drop(columns=['Player Type'])
             team2_tbl = results[1].drop(columns=['Player Type'])
             

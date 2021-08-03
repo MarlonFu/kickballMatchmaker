@@ -26,44 +26,84 @@
     <h3 class="pageDescription"> Generate teams based on player skill </h3>
     
     <div class="playerTable">
-        <table class="playerTable">
+        <table class="playerTable" cellspacing="0" cellpadding="0">
             {{ table|safe }}
         </div>
     </div>
     
     
     <div>
-        <button type="button" class="button blueButton" id="addPlayer" name="addPlayer" style="margin-top: 1vh;" onclick="showAddPlayer()"> 
+        <button type="button" class="button blueButton" id="addPlayer" name="addPlayer" style="margin-top: 1vh; width: 40%;" onclick="showAddPlayer()"> 
             ADD PLAYER 
         </button>
     </div>
 
     <div class="popUp" id='addPlayerPopUp'>
         <div>
+            
+            
             <form action="/add_player" method="post">
                 <div class="sliderWithLabel">
-                    <label class="inputLabel" for="name"> Name </label>
-                    <input class="textInput" id="name" name="name" required/>
+                    <label class="inputLabel" for="name"> Player Name </label>
+                    <input class="textInput" id="name" name="name" style="margin-top: 0.75vh;" required/>
+                </div>
+                <div style="margin-left: 1vw; margin-right: 1vw;">
+                    <p> Survey your players for their skill levels (on a scale from 1-5) in the following categories: </p>
                 </div>
                 <div class="sliderWithLabel">
-                    <label for="knowledge"> Knowledge of Rules</label>
-                    <input class="slider" id="knowledge" name="knowledge" type="range" min="1" max="5" step="1" />
+                    <label class="inputLabel" for="knowledge"> Knowledge of Rules</label>
+                    <input class="slider" id="knowledge" name="knowledge" type="range" min="1" max="5" step="1" list="tickmarks"/>
+                    <datalist id="tickmarks">
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
                 </div>
                 <div class="sliderWithLabel">
-                    <label for="speed"> Running Speed </label>
-                    <input class="slider" id="speed" name="speed" type="range" min="1" max="5" step="1" />
+                    <label class="inputLabel" for="speed"> Running Speed </label>
+                    <input class="slider" id="speed" name="speed" type="range" min="1" max="5" step="1" list="tickmarks"/>
+                    <datalist id="tickmarks">
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
                 </div>
                 <div class="sliderWithLabel">
-                    <label for="throwing"> Throwing Ability </label>
-                    <input class="slider" id="throwing" name="throwing" type="range" min="1" max="5" step="1" />
+                    <label class="inputLabel" for="throwing"> Throwing Ability </label>
+                    <input class="slider" id="throwing" name="throwing" type="range" min="1" max="5" step="1" list="tickmarks"/>
+                    <datalist id="tickmarks">
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
                 </div>
                 <div class="sliderWithLabel">
-                    <label for="catching"> Catching Ability </label>
-                    <input class="slider" id="catching" name="catching" type="range" min="1" max="5" step="1" />
+                    <label class="inputLabel" for="catching"> Catching Ability </label>
+                    <input class="slider" id="catching" name="catching" type="range" min="1" max="5" step="1" list="tickmarks"/>
+                    <datalist id="tickmarks">
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
                 </div>
                 <div class="sliderWithLabel">
-                    <label for="batting"> Batting/Kicking Ability </label>
-                    <input class="slider" id="batting" name="batting" type="range" min="1" max="5" step="1" />
+                    <label class="inputLabel" for="batting"> Batting/Kicking Ability </label>
+                    <input class="slider" id="batting" name="batting" type="range" min="1" max="5" step="1" list="tickmarks"/>
+                    <datalist id="tickmarks">
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
                 </div>
                 <input type="submit", class="button greenButton", value="CONFIRM" style="width: 250px; margin-bottom: 1vh;">
             </form>
@@ -76,8 +116,8 @@
     <form action="/create_teams" method="get">
         <input type="submit" class="button greenButton" value="CREATE TEAMS">
     </form>
-    <div>
-        {{ error }}
+    <div style="margin-top: -2vh;">
+        <p class="errorMessage"> {{ error }} </p>
     </div>
     
 </div>

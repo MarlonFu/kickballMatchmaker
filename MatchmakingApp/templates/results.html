@@ -1,25 +1,30 @@
 {% extends 'layout.html' %}
 
 {% block body %} 
-<div>
-    <h3> Team 1</h3>
-    <p> Total </p>
-    <p> {{ team1_info['total'] }} </p>
-    <p> Avg </p>
-    <p> {{ team1_info['avg'] }} </p>
-    <table class="playerTable">
-        {{ team1|safe }}
-    </table>
-    
+<div class="results">
+    <div style="display: inline-block; margin-right: 1vw; vertical-align: top;">
+        <h2> Team 1</h2>
+        
+        <table class="playerTable">
+            {{ team1|safe }}
+        </table>
+        <p> Total: {{ team1_info['total'] }} </p>
+        <p> Avg: {{ team1_info['avg'] }} </p>
+        
+    </div>
+    <div style="display: inline-block; margin-left: 1vw; vertical-align: top;">
+        <h2> Team 2 </h2>
+        
+        <table class="playerTable">
+            {{ team2|safe }}
+        </table>
+        <p> Total: {{ team2_info['total'] }} </p>
+        <p> Avg: {{ team2_info['avg'] }} </p>
+    </div>
 </div>
-<div>
-    <h3> Team 2 </h3>
-    <p> Total </p>
-    <p> {{ team2_info['total'] }} </p>
-    <p> Avg </p>
-    <p> {{ team2_info['avg'] }} </p>
-    <table class="playerTable">
-        {{ team2|safe }}
-    </table>
-</div>
+
+
+<form action="/">
+    <input type="submit" class="button greenButton" value="NEW MATCH">
+</form>
 {% endblock %}

@@ -3,6 +3,7 @@ from flask import request
 
 import numpy as np 
 import pandas as pd
+from IPython.display import HTML
 from sklearn.cluster import KMeans
 
 app = Flask(__name__)
@@ -37,8 +38,8 @@ def add_player():
         return render_template('home.html', table=player_data.table.to_html(index=False))
 
 
-@app.route('/create_teams', methods=['GET'])
-def create_teams():
+@app.route('/render_teams', methods=['GET'])
+def render_teams():
     if request.method =='GET':
         if player_data.table.shape[0] < 2:
             error = 'Must have at least 2 players.'
